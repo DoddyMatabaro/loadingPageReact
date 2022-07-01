@@ -8,7 +8,7 @@
     transition: 2s;
 }
 
-.slider_zoom{
+.slider--zoom{
     opacity: 1;
     transform: scale(100%);
     transform: 2s;

@@ -1,9 +1,11 @@
 import React from 'react';
-import { useInVifew } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer';
 import "./slides.css"
 
+
+let UseInView = useInView;
 function slides({imgSrc, title, subtitle,filpped}) {
-    const { ref, inView } = useInView({
+    const { ref, inView } = UseInView({
         /* Optional options */
         threshold: 0.4,
       });
@@ -28,7 +30,7 @@ function slides({imgSrc, title, subtitle,filpped}) {
     }
   }
     return (
-    <div className={inView ? "slider slider-zoom" : 'slider'} ref={ref}>{renderContent()}</div>
+    <div className={inView ? "slider slider--zoom" : 'slider'} ref={ref}>{renderContent()}</div>
   )
 }
 
