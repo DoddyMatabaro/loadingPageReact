@@ -1,8 +1,8 @@
-import React, { UseState } from 'react'
+import React, { useState } from 'react'
 import "./Navbar.css"
 import{FiMenu, FiX} from "react-icons/fi";
 
-// let UseState  = useState; 
+let UseState  = useState; 
 const Navbar = ({navbarLinks}) => {
         const [menuClicked, setMenuClicked] =  UseState(false);         
         const toggleMenuClick=()=>{
@@ -18,7 +18,7 @@ const Navbar = ({navbarLinks}) => {
         ) : (
             <FiMenu size={25} className="navbar_menu" onClick={toggleMenuClick} />
         )}
-        <ul className='navbar_list'>
+        <ul className={menuClicked ? 'navbar_list' : "navbar_list navbar_list--active"}>
             {navbarLinks.map((item)=>{
                 return (
                     <li className='navbar_item' key={item.title}>
