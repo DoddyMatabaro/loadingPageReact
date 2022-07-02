@@ -14,7 +14,7 @@ const navbarLinks = [
 function App() {
   return (
     <div className="App">
-      <Navbar navbarLinkd={navbarLinks}/>
+      <Navbar navbarLinks={navbarLinks}/>
       <Hero imgSrc={bgr}/>
         
       <Slider imgSrc={img1} title={"La Famille"} subtitle={"Nous venons rendre les familles autonomes"} />

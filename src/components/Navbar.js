@@ -3,7 +3,7 @@ import "./Navbar.css"
 import{FiMenu, Fix} from "react-icons/fi";
 
 // const navbarLinks = [{ url: "./Home", title: "Home"}]
-export const Navbar = ({NavbarLink}) => {
+const Navbar = ({navbarLinks}) => {
   return (
     <nav>
         <span className="navBar_logo">Action JUWA</span>
