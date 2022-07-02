@@ -6,6 +6,7 @@ import{FiMenu, Fix} from "react-icons/fi";
 export const Navbar = ({NavbarLink}) => {
   return (
     <nav>
+        <span className="navBar_logo">Action JUWA</span>
         <ul>
             {navbarLinks.map((item)=>{
                 return (
@@ -18,5 +19,7 @@ export const Navbar = ({NavbarLink}) => {
             })}
         </ul>
     </nav>
+
   )
 }
+export default Navbar;
