@@ -50,8 +50,8 @@
     display: none;
 }
 
-@media  and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .navbar_menu{
-        display:block;
+        display: block;
     }
 }
