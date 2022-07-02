@@ -1,17 +1,28 @@
-import React from 'react'
+import React, { UseState } from 'react'
 import "./Navbar.css"
-import{FiMenu, Fix} from "react-icons/fi";
+import{FiMenu, FiX} from "react-icons/fi";
 
-// const navbarLinks = [{ url: "./Home", title: "Home"}]
+// let UseState  = useState; 
 const Navbar = ({navbarLinks}) => {
-  return (
-    <nav>
-        <span className="navBar_logo">Action JUWA</span>
-        <ul>
+        const [menuClicked, setMenuClicked] =  UseState(false);         
+        const toggleMenuClick=()=>{
+            setMenuClicked(!menuClicked);
+        }
+
+  return(
+    <nav className="navbar">
+        {/* <span className='navbar'></span> */}
+        <span className="navbar_logo">DM inc</span>
+        { menuClicked ? (
+            <FiX size={25} className="navbar_menu" onClick={toggleMenuClick} />
+        ) : (
+            <FiMenu size={25} className="navbar_menu" onClick={toggleMenuClick} />
+        )}
+        <ul className='navbar_list'>
             {navbarLinks.map((item)=>{
                 return (
-                    <li className='navBar_item' key={item.title}>
-                        <a className="navBar_link" href={item.url}>
+                    <li className='navbar_item' key={item.title}>
+                        <a className="navbar_link" href={item.url}>
                             {item.title}
                         </a>
                     </li>

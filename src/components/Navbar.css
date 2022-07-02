@@ -38,3 +38,20 @@
     transition: 250ms;
 
 }
+
+.navbar_link:hover{
+    border-color: white;
+    transition: 250ms;
+}
+
+.navbar_menu{
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+@media  and (max-width: 800px) {
+    .navbar_menu{
+        display:block;
+    }
+}

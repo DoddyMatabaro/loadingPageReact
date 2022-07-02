@@ -15,8 +15,7 @@ function App() {
   return (
     <div className="App">
       <Navbar navbarLinks={navbarLinks}/>
-      <Hero imgSrc={bgr}/>
-        
+      <Hero imgSrc={bgr}/>  
       <Slider imgSrc={img1} title={"La Famille"} subtitle={"Nous venons rendre les familles autonomes"} />
       <Slider imgSrc={img2} title={"La Famine"} subtitle={"Nous combattons la famille dans la communaute"} />
     </div>
